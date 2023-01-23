@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Traffic monitor and Prediction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="./dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div id="map" class="map"></div>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script src="./dist/leaflet-routing-machine.js"></script>
+    <button id="aboutButton" onclick="fn_about()">About</button>
+    <button id="helpButton" onclick="fn_help()">Help</button>
+    <script src="Control.Geocoder.js"></script>
+    <script src="config.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+<script>
+    function fn_about() {
+        alert("\t\t\tTraffic control and navigation system\n\n\nThis project was designed and engineered by Katamba Hamza\nBSc(hons) Computing and Information Systems\nUniversity Centre Peterborough.\n\n\t\t\tCopyright 2023 Katamba Hamza");
+    }
+    function fn_help() {
+        alert("\t\t\tTraffic control and navigation system\n\n\n1) Drag Blue markers setting your source and destination respectively\n\n2) A red waypoint is displayed connecting the markers, showing the quickest route possible based on the analyzed data\n\n3) A blue waypoint is added to the red waypoint as an alternative path to destination, if available\n\n4) You can alternatively use the search areas at the top right of the screen for the source and destination street longitude and latitude - which in turn will automatically place the markers and waypoint(s) for you using the quickest traffic free route possible\n\n5) Press on the Red marker(s) to show the name of street and the annual number of motor vehicles as of count that very year\n\n6) The container on the top right contains a detailed list of directions that automatically update during navigation.");
+    }
+</script>
